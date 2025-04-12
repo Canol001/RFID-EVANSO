@@ -59,7 +59,8 @@ export function Dashboard() {
   `;
 
   function init() {
-    fetch('http://localhost:3000/api/dashboard')
+    // fetch('http://localhost:3000/api/dashboard')
+    fetch('https://rfid-attendance-backend.onrender.com/api/dashboard')
       .then(res => res.json())
       .then(data => {
         document.querySelector('#total-students').textContent = data.total || 0;
